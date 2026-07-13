@@ -19,3 +19,20 @@ li {
     color: blue;
     text-decoration: none;
 }
+
+.likes-dislikes {
+    display: flex;
+    justify-content: center;
+    /* Centers the two columns on the page */
+    gap: 40px;
+    /* Adds a nice gap between the two lists */
+    max-width: 600px;
+    /* Prevents the lists from spreading too far apart */
+    margin: 0 auto;
+    /* Centers the entire container itself */
+}
+
+/* Optional: Ensures both columns have an equal layout width */
+.ld-list-section {
+    flex: 1;
+}
