@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Google+Sans');
+
 body {
     text-align: center;
     font-family: 'Google Sans';
@@ -12,4 +13,9 @@ li {
     width: 120px;
     height: 120px;
     border-radius: 50%;
+}
+
+.social-links {
+    color: blue;
+    text-decoration: none;
 }
