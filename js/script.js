@@ -47,9 +47,10 @@ function updateTime() {
     }
 }
 
-// Run all three functions when the page loads
 window.addEventListener('DOMContentLoaded', () => {
     updateAge();
     updateTimezone();
     updateTime();
+
+    setInterval(updateTime, 1000);
 });
