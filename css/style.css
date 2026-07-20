@@ -39,12 +39,12 @@ li {
         transform: scale(0.95);
     }
 
-    .social-links:hover {
+    .links:hover {
         text-decoration: underline;
     }
 }
 
-.social-links {
+.links {
     color: blue;
     text-decoration: none;
 }
