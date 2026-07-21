@@ -24,7 +24,6 @@ function updateTimezone() {
     const offsetPart = parts.find(part => part.type === 'timeZoneName').value;
     const fancyOffset = offsetPart.replace('GMT', 'UTC');
 
-
     const timezoneElement = document.getElementById('myTimezone');
     if (timezoneElement) {
         timezoneElement.textContent = fancyOffset;
@@ -36,8 +35,11 @@ function updateTime() {
 
     const timeOptions = { timeZone: 'America/Chicago', hour: 'numeric', minute: '2-digit', hour12: true };
     const timeFormatter = new Intl.DateTimeFormat('en-US', timeOptions);
-    const currentTime = timeFormatter.format(now).toLowerCase();
 
+    const currentTime = timeFormatter.format(now)
+        .toLowerCase()
+        .replaceAll(' ', '')
+        .replaceAll('\u202F', '');
 
     const timeElement = document.getElementById('myLocalTime');
     if (timeElement) {
