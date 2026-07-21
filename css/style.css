@@ -4,6 +4,17 @@ body {
     text-align: center;
     font-family: 'Mate';
     padding: 20px;
+    user-select: none;
+    color: #fff;
+}
+
+.bg-video {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
 }
 
 li {
@@ -14,7 +25,6 @@ li {
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    transition: transform 0.2s ease-in-out;
 }
 
 .pet-portraits {
@@ -23,22 +33,9 @@ li {
     height: auto;
     border-radius: 10px;
     margin-top: 20px;
-    transition: transform 0.2s ease-in-out;
-}
-
-.pet-portraits:hover {
-    transform: scale(0.95);
 }
 
 @media (hover: hover) {
-    .profile-image:hover {
-        transform: scale(1.08) rotate(-5deg);
-    }
-
-    .pet-portraits:hover {
-        transform: scale(0.95);
-    }
-
     .links:hover {
         text-decoration: underline;
     }
@@ -49,7 +46,7 @@ li {
     text-decoration: none;
 }
 
-.likes-dislikes {
+.ld {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -57,12 +54,12 @@ li {
     margin: 0 auto;
 }
 
-.ld-list-section {
+.ld-list {
     flex: 1;
 }
 
 @media (min-width: 480px) {
-    .likes-dislikes {
+    .ld {
         flex-direction: row;
         gap: 40px;
     }
